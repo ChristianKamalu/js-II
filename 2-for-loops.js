@@ -42,3 +42,33 @@ for(var i = 0; i < nums.length; i++){
 }
 
 console.log(nums)
+
+// .ForEach 
+//doesn't return anything
+
+let favNums = [1, 2, 15];
+
+let total = 0;
+favNums.forEach((item, index, arr) => total += item)
+
+total;
+
+// .MAP (not destructive)
+let doubleNums = favNums.map((item, index, arr) => {
+    return item * 2;
+})
+doubleNums;
+//or you can use the implicit function notation 
+let doubleNums = favNums.map((item, index, arr) => item * 2)
+doubleNums;
+
+// .FILTER (not destructive)
+let bigNums = favNums.filter((item, index, arr) => {
+    return item > 1000;
+})
+
+// .REDUCE (not destructive)
+//reduces everything into a single value including numbers, strings, etc.
+let total = favNums((total, current, index, arr) => {
+    return total + current;
+})

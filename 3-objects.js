@@ -79,3 +79,16 @@ for (let i = 0; i < myData.favoriteThings.length; i++){
     myData.favoriteThings[i] = `Smiling`;
 }
 console.log(myData.favoriteThings);
+
+
+// Syntax for copying an object:
+
+const meCopy = Object.assign({}, me)
+
+//or use the spread operator
+
+const meCopy = {...me}
+
+//Destructuring
+
+const {key1, key2, key3} = obj;
